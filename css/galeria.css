@@ -1,0 +1,82 @@
+.section-title {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--guinda);
+    margin-top: 10px;
+}
+
+/* GRID MURAL */
+.galeria-mural {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.foto-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.foto-item.large {
+    grid-row: span 2;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Efecto Overlay Guinda */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 14, 22, 0.85); /* Guinda transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.overlay span {
+    color: var(--dorado);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--dorado);
+    transform: translateY(20px);
+    transition: 0.4s;
+}
+
+.foto-item:hover .overlay {
+    opacity: 1;
+}
+
+.foto-item:hover .overlay span {
+    transform: translateY(0);
+}
+
+.foto-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .galeria-mural { grid-auto-rows: 300px; }
+    .foto-item.large { grid-row: span 1; }
+}

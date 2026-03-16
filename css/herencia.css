@@ -1,0 +1,83 @@
+/* SECCIÓN HERO INICIO */
+.hero-criollo {
+    height: 85vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+    padding: 0 20px;
+}
+
+.badge-criollo {
+    display: inline-block;
+    color: var(--dorado);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--dorado);
+}
+
+.hero-criollo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-criollo p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* BOTONES HERO */
+.hero-btns { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.btn-criollo { 
+    background: var(--guinda); 
+    color: white; 
+    padding: 15px 35px; 
+    text-decoration: none; 
+    font-weight: 700; 
+    border-radius: 4px; 
+    transition: 0.3s; 
+    border: 1px solid var(--guinda); 
+    text-transform: uppercase; 
+}
+
+.btn-criollo-sec { 
+    background: transparent; 
+    color: white; 
+    padding: 15px 35px; 
+    text-decoration: none; 
+    font-weight: 700; 
+    border-radius: 4px; 
+    transition: 0.3s; 
+    border: 2px solid var(--dorado); 
+    text-transform: uppercase; 
+}
+
+.btn-criollo:hover { 
+    background: var(--dorado); 
+    border-color: var(--dorado);
+    color: var(--oscuro); 
+}
+
+.btn-criollo-sec:hover { 
+    background: var(--dorado); 
+    color: var(--oscuro); 
+}

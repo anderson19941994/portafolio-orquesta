@@ -1,0 +1,63 @@
+.historia-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 80px 0;
+    align-items: center;
+}
+
+.historia-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--guinda);
+    margin: 15px 0;
+}
+
+.historia-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.historia-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0px var(--dorado);
+}
+
+/* Sección de Valores */
+.valores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.valor {
+    padding: 20px;
+    background: var(--crema);
+    border-radius: 5px;
+}
+
+.valor i {
+    color: var(--guinda);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.valor h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .historia-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .historia-img {
+        order: -1;
+    }
+}
