@@ -14,7 +14,7 @@
     font-family: 'Poppins', sans-serif; 
 }
 
-body { background-color: var(--blanco); }
+body { background-color: var(--blanco); overflow-x: hidden; }
 
 .container { 
     max-width: 1200px; 
@@ -45,7 +45,7 @@ body { background-color: var(--blanco); }
     letter-spacing: 4px; 
 }
 
-/* NAVEGACIÓN */
+/* NAVEGACIÓN - Aquí está el arreglo */
 .main-nav { 
     background: var(--guinda); 
     position: sticky; 
@@ -59,7 +59,8 @@ body { background-color: var(--blanco); }
     justify-content: center; 
     list-style: none; 
     padding: 15px 0; 
-    gap: 30px; 
+    gap: 20px; 
+    flex-wrap: wrap; /* Arreglo para celular */
 }
 
 .main-nav a { 
@@ -69,6 +70,7 @@ body { background-color: var(--blanco); }
     font-weight: 600; 
     text-transform: uppercase; 
     transition: 0.3s; 
+    white-space: nowrap; /* Evita que el texto se parta feo */
 }
 
 .main-nav a:hover { color: var(--dorado); }
@@ -144,4 +146,11 @@ body { background-color: var(--blanco); }
     border-top: 1px solid #333; 
     font-size: 0.8rem; 
     opacity: 0.6; 
+}
+
+/* RESPONSIVE EXTRA PARA CELULAR */
+@media (max-width: 600px) {
+    .brand-name { font-size: 1.8rem; letter-spacing: 2px; }
+    .main-nav ul { gap: 10px; padding: 10px 5px; }
+    .main-nav a { font-size: 0.75rem; }
 }
